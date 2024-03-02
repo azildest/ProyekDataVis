@@ -9,3 +9,7 @@ pip install numpy pandas scipy matplotlib seaborn jupyter streamlit babel
 ```
 streamlit run dashboard.py
 ```
+or
+```
+streamlit run dashboard/dashboard.py
+```
