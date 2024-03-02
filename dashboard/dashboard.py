@@ -96,8 +96,6 @@ registered_trend_df = create_registered_trend_df(main_df)
 st.header('Bicycle Sharing Dashboard')
 st.write('Dataset dapat diakses di: [Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset?resource=download&select=day.csv)')
  
-st.subheader('Daily Orders')
- 
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
@@ -118,7 +116,8 @@ with col4:
     
     st.metric("Pengguna terdaftar", value=formatted_total_registered)
 
-#jumlah penyewaan sepeda (line chart) 
+#jumlah penyewaan sepeda (line chart)
+st.subheader("Jumlah Penyewaan Sepeda Berdasarkan Bulan dan Tahun")
 fig, ax = plt.subplots(figsize=(10, 5))
 
 ax.plot(
@@ -130,7 +129,6 @@ ax.plot(
 )
 
 ax.get_yaxis().get_major_formatter().set_scientific(False)
-ax.set_title("Jumlah Penyewaan Sepeda Berdasarkan Bulan dan Tahun", loc="center", fontsize=20)
 ax.tick_params(axis='x', labelrotation=45)
 ax.tick_params(axis='both', labelsize=10)
 
